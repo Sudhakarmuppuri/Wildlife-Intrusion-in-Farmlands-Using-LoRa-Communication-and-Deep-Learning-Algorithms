@@ -21,7 +21,7 @@ ser = serial.Serial('COM5', baudrate=9600)
 print("Serial connection opened successfully!")
 
 # Load the YOLOv8 model
-model = YOLO("C:/Users/kmith/Desktop/MITHUN/Major Project/MP/runs/detect/train6/weights/best.pt")
+model = YOLO(" ")
 
 # Email credentials 
 sender_email = "xyz@gmail.com" 
@@ -133,12 +133,5 @@ from ultralytics import YOLO
 model = YOLO("C:/Users/kmith/Desktop/MITHUN/Major Project/MP/runs/detect/train6/weights/best.pt") # replace with your model path
 
 # Evaluate the model on a dataset (e.g., COCO-format or YOLO-format dataset)
-metrics = model.val(data="C:/Users/kmith/Desktop/MITHUN/Major Project/MP/Dataset/animals.v1i.yolov8/data.yaml", split='test')  # or split='test'
+metrics = model.val(data=" ", split='test')  # or split='test'
 
-# Print evaluation metrics
-print("Evaluation Metrics:")
-print(f"Precision: {metrics.box.mAP50:.4f}")
-print(f"Recall: {metrics.box.recall:.4f}")
-print(f"mAP@0.5: {metrics.box.mAP50:.4f}")
-print(f"mAP@0.5:0.95: {metrics.box.mAP50_95:.4f}")
-print(f"F1 Score: {(2 * metrics.box.mAP50 * metrics.box.recall) / (metrics.box.mAP50 + metrics.box.recall + 1e-6):.4f}")
